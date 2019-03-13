@@ -15,6 +15,7 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.find(params[:id])
+    @account_posts = @account.posts
   end
 
   private

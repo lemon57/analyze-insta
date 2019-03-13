@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_03_13_143909) do
 
   create_table "account_followers", primary_key: "record_id", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "main_account_id", limit: 15, default: "", null: false
@@ -109,6 +109,12 @@ ActiveRecord::Schema.define(version: 0) do
     t.boolean "IS_USED", null: false
     t.datetime "LAST_USED"
     t.boolean "IS_LIVE", null: false, unsigned: true
+  end
+
+  create_table "scans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "selections", primary_key: "selection_id", id: :bigint, unsigned: true, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
