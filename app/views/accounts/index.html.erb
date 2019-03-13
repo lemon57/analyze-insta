@@ -1,0 +1,8 @@
+<% @accounts.each do |account| %>
+  <h2><%= account.username %></h2>
+  <p><%= account.full_name %></p>
+  <p><%= account.account_id %></p>
+  <p><%= account.media_count %></p>
+  <p><%= account.followers_count %></p>
+  <p><%= account.follows_count %></p>
+<% end %>

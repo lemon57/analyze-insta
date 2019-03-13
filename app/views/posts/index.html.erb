@@ -1,0 +1,6 @@
+<% @posts.each do |post| %>
+  <h3><%= post.account_id %></h3>
+  <p><%= post.caption %></p>
+  <p><%= post.likes_count %></p>
+  <p><%= post.comments_count %></p>
+<% end %>
