@@ -3,11 +3,12 @@
 <div>
   <h2>Input Instagram account for checking</h2>
 </div>
-<%= simple_form_for (@scan) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+   <%= simple_form_for (@scan) do |f| %>
+     <%= f.input :name %>
+     <%= f.submit "Submit", class: "btn btn-primary" %>
+   <% end %>
 
-<% flash.each do |key, value| %>
-  <div class="alert alert-<%= key %>"><%= value %></div>
-<% end %>
+   <% flash.each do |key, value| %>
+     <div class="alert alert-<%= key %>"><%= value %></div>
+   <% end %>
+

@@ -1,3 +1,4 @@
+require "open3"
 class AccountsController < ApplicationController
   def index
     @accounts = Account.all
@@ -14,8 +15,12 @@ class AccountsController < ApplicationController
   end
 
   def show
+    @st = Open3.popen3('date') do |stdin, stdout, stderr|
+      stdout.read
+    end
     @account = Account.find(params[:id])
     @account_posts = @account.posts
+
   end
 
   private
