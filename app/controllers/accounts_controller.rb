@@ -2,6 +2,7 @@ require "open3"
 class AccountsController < ApplicationController
   def index
     @accounts = Account.all
+
   end
 
   def new
