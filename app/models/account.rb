@@ -1,3 +1,3 @@
 class Account < ApplicationRecord
-  has_many :posts, :followers
+  has_many :posts
 end
